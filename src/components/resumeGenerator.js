@@ -14,12 +14,15 @@ const ResumeGenerator = () => {
     console.log(input.value)
     fetch(input.value).then(res => res.json()).then(data=> setData(data))
   }
-  const update = (newData) => {
-    setData(newData)
-  }
-  const test = (e) => {
+
+  const update = (e) => {
+    const newData = {
+      data: e.updated_src
+    }
     console.log(e)
+    setData(e.updated_src)
   }
+
 
   return (
     <div className="resume-generator">
@@ -30,7 +33,7 @@ const ResumeGenerator = () => {
         <input type="text" id="input-fetch" placeholder="enter data endpoint" />
         <input type="submit" value="Fetch data"/>
       </form>
-      <ReactJson src={data} />
+      <ReactJson theme="monokai" src={data} onEdit={update}/>
     </div>
   )
 }
