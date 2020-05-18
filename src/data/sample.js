@@ -1,12 +1,12 @@
 export const data = {
   basics: {
     name: "Randy Marsh",
-    label: "Geologist",
+    title: "Geologist",
     picture: "https://github.com/clairefro/resume-builder/blob/master/static/images/randy.png?raw=true",
     email: "lorde@gmail.com",
     phone: "(912) 555-4321",
-    website: `http://randymarsh.com`,
-    summary: "A summary of John Doe...",
+    website: `www.tegridy.com`,
+    summary: "Hemp farmer dating back 0 generations. Seeking new job as my current manager is a towel.",
     location: {
       address: "2712 Broadway St",
       city: "South Park",
@@ -15,13 +15,18 @@ export const data = {
     },
     profiles: [{
       network: "Linkedin",
-      username: "Randy",
-      url: "http://twitter.com/john"
+      username: "Randy Marsh",
+      url: "linkedin.com/in/r-marsh "
+    },
+    {
+      network: "Twitter",
+      username: "rmarsh",
+      url: "https://twitter.com/rmarsh"
     }]
   },
   work: [{
     company: "Tegridy Farms",
-    position: "Farmer",
+    position: "Hemp Farmer",
     startDate: "2019-01-01",
     endDate: "present",
     summary: "Description...",

@@ -8,6 +8,11 @@ body {
   color: $black;
 }
 
+a,p {
+  padding: 0;
+  margin: 0;
+
+}
 .container {
   margin: 4rem;
 }

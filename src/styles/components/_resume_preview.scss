@@ -2,4 +2,40 @@
   border: solid 1px $black;
   width: 1159px;
   height: 1500px;
+  padding: 4rem;
+  .section {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .picture-name {
+    display: flex;
+    align-items: flex-end;
+    .profile-picture {
+      width: 200px;
+      object-fit: contain;
+    }
+    .picture-name-right {
+      margin: 0 2rem;
+      h1 {
+        font-size: 48px;
+      }
+    }
+  }
+  .section-socials {
+    background-color: rgba(0,0,0,0.1);
+    & > div {
+      display: flex;
+    }
+    .contact-info {
+      margin-bottom: 1rem;
+      justify-content: space-between;
+    }
+    .social-media {
+      p {
+        margin-right: 2rem;
+      }
+
+    }
+  }
 }
