@@ -29,23 +29,39 @@ const ResumeGenerator = () => {
     setTheme(selector.value)
   }
 
+  const reset = () => {
+    setData(sampleData)
+  }
+
   return (
     <div className="resume-generator">
       <h1>Resume Builder</h1>
       <h3>Scroll below to edit data</h3>
-      <p>Theme</p>
-      <select onChange={updateTheme} id="theme-select">
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
-      <ResumePreview data={data} theme={theme} />
 
-      <form onSubmit={handleFetch}>
-        <input type="text" id="input-fetch" placeholder="enter data endpoint" />
-        <input type="submit" value="Fetch data"/>
-      </form>
-      <p>Click the edit pen next to an item, then the check mark to edit the data</p>
-      <ReactJson theme="monokai" src={data} onEdit={update}/>
+      <div className='screens'>
+
+        <div className="left-screen">
+          <ResumePreview data={data} theme={theme} />
+        </div>
+        <div className="right-screen">
+          <p>Theme</p>
+          <select onChange={updateTheme} id="theme-select">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+          <form onSubmit={handleFetch}>
+            <input type="text" id="input-fetch" placeholder="enter data endpoint" />
+            <input type="submit" value="Fetch data"/>
+          </form>
+          <button onClick={reset}>Reset data</button>
+          <p>Click the edit pen next to an item, then the check mark to edit the data</p>
+          <ReactJson theme="monokai" src={data} onEdit={update}/>
+        </div>
+
+      </div>
+
+
+
     </div>
   )
 }
