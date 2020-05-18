@@ -7,6 +7,7 @@ import { sampleData } from '../data/sample';
 
 const ResumeGenerator = () => {
   const [data, setData] = useState(sampleData);
+  const [theme, setTheme] = useState('light');
 
   const handleFetch = (e) => {
     e.preventDefault();
@@ -23,12 +24,22 @@ const ResumeGenerator = () => {
     setData(e.updated_src)
   }
 
+  const updateTheme = () => {
+    const selector = document.getElementById('theme-select')
+    setTheme(selector.value)
+  }
 
   return (
     <div className="resume-generator">
       <h1>Resume Builder</h1>
       <h3>Scroll below to edit data</h3>
-      <ResumePreview data={data} />
+      <p>Theme</p>
+      <select onChange={updateTheme} id="theme-select">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <ResumePreview data={data} theme={theme} />
+
       <form onSubmit={handleFetch}>
         <input type="text" id="input-fetch" placeholder="enter data endpoint" />
         <input type="submit" value="Fetch data"/>

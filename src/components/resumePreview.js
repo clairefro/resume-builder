@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 const stringifyDates = (start, end) => {
   const s = new Date(start).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
@@ -10,7 +10,7 @@ const stringifyDates = (start, end) => {
   return `${s} - ${e}`;
 }
 
-const ResumePreview = ({ data }) => {
+const ResumePreview = ({ data, theme }) => {
   const {
     basics,
     work,
@@ -19,9 +19,9 @@ const ResumePreview = ({ data }) => {
     languages,
     interests
   } = data
-  
+
   return (
-    <div className="resume-preview">
+    <div className={`resume-preview ${theme}`}>
       <div className="section-basic-info">
         <div className="picture-name">
           {basics.picture &&

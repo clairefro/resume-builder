@@ -8,6 +8,19 @@ body {
   color: $black;
 }
 
+.light {
+  color: $black;
+  background: #FFF;
+}
+
+.dark {
+  color: #FFF;
+  background: rgba(0,0,0,0.7);
+  a {
+    color: #FFF;
+  }
+}
+
 a,p {
   padding: 0;
   margin: 0;
