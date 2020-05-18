@@ -36,8 +36,6 @@ const ResumeGenerator = () => {
   return (
     <div className="resume-generator">
       <h1>Resume Builder</h1>
-      <h3>Scroll below to edit data</h3>
-
       <div className='screens'>
 
         <div className="left-screen">
