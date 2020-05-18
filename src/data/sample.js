@@ -36,7 +36,7 @@ export const data = {
     position: "Researcher",
     startDate: "2008-01-01",
     endDate: "2019-01-01",
-    summary: "Description...",
+    summary: "Go on digs, study rocks, name new rocks",
   }],
   // "volunteer": [{
   //   "organization": "Organization",
@@ -55,7 +55,15 @@ export const data = {
     certificate: "Bachelor",
     startDate: "2004-01-01",
     endDate: "2008-01-01",
-  }],
+  },
+  {
+    institution: "South Park High School",
+    field: "General Studies",
+    certificate: "HS Diploma",
+    startDate: "2000-01-01",
+    endDate: "2004-01-01",
+  }
+],
   // "awards": [{
   //   "title": "Award",
   //   "date": "2014-11-01",
@@ -70,7 +78,19 @@ export const data = {
       "CSS",
       "Javascript"
     ]
-  }],
+  },
+  {
+    name: "Rock identifying"
+  },
+  {
+    name: "Hemp spinning"
+  },
+  {
+    name: "Singing"
+  },
+  {
+    name: "Causing trouble"
+  },],
   languages: [{
     language: "English",
     fluency: "Native"

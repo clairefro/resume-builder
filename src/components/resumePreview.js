@@ -19,6 +19,7 @@ const ResumePreview = ({ data }) => {
     languages,
     interests
   } = data
+  
   return (
     <div className="resume-preview">
       <div className="section-basic-info">
@@ -66,14 +67,12 @@ const ResumePreview = ({ data }) => {
           <div className="section work-experience">
             <h2>Work Experience</h2>
             <ul className="work-items">
-              {work.map((w,i)=> {
-                return (
+              {work.map((w,i)=> (
                   <li className="item work-item" key={i}>
                     <h3>{`${w.position}, ${w.company}`} <span className="date">{stringifyDates(w.startDate, w.endDate)}</span></h3>
                     <p>{w.summary && w.summary}</p>
                   </li>
                 )
-              }
               )}
             </ul>
           </div>
@@ -83,33 +82,60 @@ const ResumePreview = ({ data }) => {
           <div className="section education">
             <h2>Education</h2>
             <ul className="education-items">
-              {education.map((e,i)=> {
-                return (
+              {education.map((e,i)=> (
                   <li className="item education-item" key={i}>
                     <h3>{e.institution}{' '}<span className="date">{stringifyDates(e.startDate, e.endDate)}</span></h3>
                     <p>{e.certificate && e.certificate}, {e.field && e.field}</p>
                   </li>
-                )}
+                )
+              )}
+            </ul>
+          </div>
+        )}
+      </div>
+
+      <div className="panel-right">
+        {skills && (
+          <div className="section skills">
+            <h2>Skills</h2>
+            <ul className="skills-items">
+              {skills.map((s,i)=> (
+                  <li className="item skills-item" key={i}>
+                      <p>{s.name}</p>
+                  </li>
+                )
               )}
             </ul>
           </div>
         )}
 
-        <div className="section education">
-        </div>
+        {skills && (
+          <div className="section languages">
+            <h2>Languages</h2>
+            <ul className="languages-items">
+              {languages.map((l,i)=> (
+                  <li className="item languages-item" key={i}>
+                      <p>{`${l.language} (${l.fluency})`}</p>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+        )}
 
-      </div>
-
-      <div className="panel-right">
-
-        <div className="section skills">
-        </div>
-
-        <div className="section languages">
-        </div>
-
-        <div className="section interests">
-        </div>
+        {interests && (
+          <div className="section interests">
+            <h2>Interests</h2>
+            <ul className="interests-items">
+              {interests.map((int,i)=> (
+                  <li className="item languages-item" key={i}>
+                      <p>{int}</p>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+        )}
 
       </div>
     </div>
