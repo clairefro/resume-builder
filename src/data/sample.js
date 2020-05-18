@@ -1,4 +1,4 @@
-export const data = {
+export const sampleData = {
   basics: {
     name: "Randy Marsh",
     title: "Geologist",
