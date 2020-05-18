@@ -1,29 +1,36 @@
 export const data = {
   basics: {
-    name: "John Doe",
-    label: "Programmer",
-    picture: "",
-    email: "john@gmail.com",
+    name: "Randy Marsh",
+    label: "Geologist",
+    picture: "https://github.com/clairefro/resume-builder/blob/master/static/images/randy.png?raw=true",
+    email: "lorde@gmail.com",
     phone: "(912) 555-4321",
-    website: `http://johndoe.com`,
+    website: `http://randymarsh.com`,
     summary: "A summary of John Doe...",
     location: {
       address: "2712 Broadway St",
-      city: "San Francisco",
+      city: "South Park",
       countryCode: "US",
-      region: "California"
+      region: "Colorado"
     },
     profiles: [{
-      network: "Twitter",
-      username: "john",
+      network: "Linkedin",
+      username: "Randy",
       url: "http://twitter.com/john"
     }]
   },
   work: [{
-    company: "Company",
-    position: "President",
-    startDate: "2013-01-01",
-    endDate: "2014-01-01",
+    company: "Tegridy Farms",
+    position: "Farmer",
+    startDate: "2019-01-01",
+    endDate: "present",
+    summary: "Description...",
+  },
+  {
+    company: "South Park Geographical Inst.",
+    position: "Researcher",
+    startDate: "2008-01-01",
+    endDate: "2019-01-01",
     summary: "Description...",
   }],
   // "volunteer": [{
@@ -38,11 +45,11 @@ export const data = {
   //   ]
   // }],
   education: [{
-    institution: "University",
-    field: "Software Development",
+    institution: "University of South Park",
+    field: "Geology",
     certificate: "Bachelor",
-    startDate: "2011-01-01",
-    endDate: "2013-01-01",
+    startDate: "2004-01-01",
+    endDate: "2008-01-01",
   }],
   // "awards": [{
   //   "title": "Award",
@@ -60,12 +67,17 @@ export const data = {
     ]
   }],
   languages: [{
-    "language": "English",
-    "fluency": "Native speaker"
-  }],
+    language: "English",
+    fluency: "Native"
+  },{
+    language: "Spanish",
+    fluency: "Conversational"
+  },
+],
   interests: [
-      "Ferrets",
-      "Unicorns"
+      "Beer",
+      "Cooking",
+      "Country living",
   ],
   // "references": [{
   //   "name": "Jane Doe",
