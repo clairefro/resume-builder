@@ -20,6 +20,9 @@
       h1 {
         font-size: 48px;
       }
+      h2 {
+        font-size: 24px;
+      }
     }
   }
   .section-socials {
@@ -35,7 +38,15 @@
       p {
         margin-right: 2rem;
       }
+    }
+  }
+
+  .panels {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    .panel-left {
 
     }
+
   }
 }

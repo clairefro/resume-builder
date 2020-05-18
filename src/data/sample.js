@@ -29,7 +29,7 @@ export const data = {
     position: "Hemp Farmer",
     startDate: "2019-01-01",
     endDate: "present",
-    summary: "Description...",
+    summary: "Grow and harvest hemp, produce hemp products. Handle accounting.",
   },
   {
     company: "South Park Geographical Inst.",
