@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { JsonEditor } from 'react-json-edit';
+import ReactJson from 'react-json-view';
 
 import ResumePreview from './resumePreview';
 
@@ -17,16 +17,20 @@ const ResumeGenerator = () => {
   const update = (newData) => {
     setData(newData)
   }
-  
+  const test = (e) => {
+    console.log(e)
+  }
+
   return (
     <div className="resume-generator">
       <h1>Resume Builder</h1>
-      <JsonEditor value={data} propagateChanges={update} />
+      <h3>Scroll below to edit data</h3>
+      <ResumePreview data={data} />
       <form onSubmit={handleFetch}>
         <input type="text" id="input-fetch" placeholder="enter data endpoint" />
         <input type="submit" value="Fetch data"/>
       </form>
-      <ResumePreview data={data} />
+      <ReactJson src={data} />
     </div>
   )
 }
