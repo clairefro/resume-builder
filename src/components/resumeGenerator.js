@@ -33,6 +33,7 @@ const ResumeGenerator = () => {
         <input type="text" id="input-fetch" placeholder="enter data endpoint" />
         <input type="submit" value="Fetch data"/>
       </form>
+      <p>Click the edit pen next to an item, then the check mark to edit the data</p>
       <ReactJson theme="monokai" src={data} onEdit={update}/>
     </div>
   )
