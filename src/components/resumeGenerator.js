@@ -17,10 +17,6 @@ const ResumeGenerator = () => {
   }
 
   const update = (e) => {
-    const newData = {
-      data: e.updated_src
-    }
-    console.log(e)
     setData(e.updated_src)
   }
 
@@ -55,11 +51,7 @@ const ResumeGenerator = () => {
           <p>Click the edit pen next to an item, then the check mark to edit the data</p>
           <ReactJson theme="monokai" src={data} onEdit={update}/>
         </div>
-
       </div>
-
-
-
     </div>
   )
 }
